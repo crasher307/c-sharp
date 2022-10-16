@@ -15,4 +15,4 @@ int num2 = rd(2);
 
 int e = num1 % num2;
 
-Console.WriteLine($"Число {num1} " + (e == 0 ? "" : "не ") + $"крано {num2}" + (e == 0 ? "" : $" остаток: {e}"));
+Console.WriteLine($"Число {num1} " + (e == 0 ? "" : "не ") + $"кратно {num2}" + (e == 0 ? "" : $" остаток: {e}"));
