@@ -10,4 +10,4 @@ int num = int.Parse(Console.ReadLine());
 
 bool result = num % 7 == 0 && num % 23 == 0;
 
-Console.WriteLine((result ? "Да" : "Нет") + $", Число {num} " + (result ? "" : "не ") + "крано 7 и 23");
+Console.WriteLine((result ? "Да" : "Нет") + $", Число {num} " + (result ? "" : "не ") + "кратно 7 и 23");
