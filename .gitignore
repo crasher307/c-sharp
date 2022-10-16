@@ -1,5 +1,9 @@
+.vscode
+example*/
+
 **/bin
 **/obj
 *.csproj
+
 *.sh
 *.zip
