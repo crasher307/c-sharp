@@ -7,6 +7,7 @@ bool getStr(string message, out string? variable) {
 	Console.Write($"{message}: ");
 	string str = Console.ReadLine();
 	bool result = int.TryParse(str, out int num);
+	result = num > 99 ? true : false; // На случай если введут 001, 002, 003, ..., 099.
 	variable = result ? str : null;
 	return result;
 }

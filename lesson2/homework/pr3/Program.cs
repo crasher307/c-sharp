@@ -7,6 +7,7 @@ bool getStr(string message, out string? variable) {
 	Console.Write($"{message}: ");
 	string str = Console.ReadLine();
 	bool result = int.TryParse(str, out int num);
+	result = (num > 0 && num < 8) ? true : false; // добавил проверку на 0, 8 и 9. У тебя с этими вариантами выходила ошибка. У меня тоже была эта проблема, но эта строка ее решает
 	variable = result ? str : null;
 	return result;
 }
