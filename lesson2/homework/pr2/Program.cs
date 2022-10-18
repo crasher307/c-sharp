@@ -16,4 +16,6 @@ while (!getStr("Введите число", out number)) {
 	Console.WriteLine("-- Попробуйте снова --");
 }
 
-Console.WriteLine($"number - {number}; result - " + (number.Length > 2 ? $"{number[2]}" : "третьей цифры нет"));
+int num = Int32.Parse(number); // преобразуем строку в число, чтобы отсечь нули, если введут 001, 002, ..., 099
+
+Console.WriteLine($"number - {number}; result - " + (num > 99 ? $"{number[2]}" : "третьей цифры нет")); // тут добавил проверку, что число точно трехзначное
