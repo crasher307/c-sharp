@@ -7,7 +7,7 @@ bool getStr(string message, out string? variable) {
 	Console.Write($"{message}: ");
 	string str = Console.ReadLine();
 	bool result = int.TryParse(str, out int num);
-	variable = result ? str : null;
+	variable = result ? $"{num}" : null;
 	return result;
 }
 
