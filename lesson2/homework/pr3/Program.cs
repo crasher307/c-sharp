@@ -14,7 +14,7 @@ bool getStr(string message, out string? variable) {
 int day = -1;
 string? number = null;
 
-while (day == null || day < 0) {
+while (day == null || day < 0 || day > 6) {
 	while (!getStr("Введите номер дня недели", out number) || number.Length != 1) {
 		Console.WriteLine("-- Попробуйте снова --");
 	}
