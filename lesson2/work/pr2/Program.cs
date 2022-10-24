@@ -1,14 +1,18 @@
-﻿// 11. Напишите программу, которая выводит случайное
+﻿using func;
+
+// 11. Напишите программу, которая выводит случайное
 // трёхзначное число и удаляет вторую цифру этого
 // числа.
 // 456 -> 46
 // 782 -> 72
 // 918 -> 98
 
-Random rnd = new Random();
+// -------------------------------------------------------------------
+
+var rnd = new Random();
 int number = rnd.Next(100, 1000);
+int.TryParse($"{number / 100}{number % 10}", out int result);
 
-int[] digit = {number / 100, number % 10};
-int result = int.Parse($"{digit[0]}{digit[1]}");
+rw.echo($"base - {number}; result - {result};");
 
-Console.WriteLine($"base - {number}; end - {result}");
+// -------------------------------------------------------------------
