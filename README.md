@@ -13,9 +13,7 @@ dotnet add reference "<folder>/<file>.csproj" # подключить библи�
 dotnet run                                    # запуск проекта
 ```
 
-### Используемые ф-ции
-- [baseFunc.*](https://github.com/crasher307/c-sharp/blob/master/func/baseFunc.cs)
-- [rw.* (наследуется от baseFunc)](https://github.com/crasher307/c-sharp/blob/master/func/rw.cs)
+<br>
 
 ### Практическая часть (семинары)
 1. Знакомство с языком программирования С#
@@ -28,3 +26,29 @@ dotnet run                                    # запуск проекта
 	- [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson3/work)
 4. Функции продолжение
 	- [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson4/work)
+
+<br>
+
+-----------------------------------------------
+
+<br>
+
+#### Bash скрипты для создания/запуска проектов
+- [create.sh](https://github.com/crasher307/c-sharp/blob/master/create.sh)
+	- Создает и переходит в папку с новым проектом
+	- Запускает создание проекта `dotnet new console`
+	- Подключает библиотеку классов `dotnet add reference *`
+	- Запускает проект для проверки `dotnet run`
+- [run.sh](https://github.com/crasher307/c-sharp/blob/master/run.sh)
+	- Переходит в папку с проектом
+	- Запускает проект `dotnet run`
+
+<br>
+
+-----------------------------------------------
+
+<br>
+
+#### Используемые ф-ции
+- [baseFunc.*](https://github.com/crasher307/c-sharp/blob/master/func/baseFunc.cs)
+- [rw.* (наследуется от baseFunc)](https://github.com/crasher307/c-sharp/blob/master/func/rw.cs)
