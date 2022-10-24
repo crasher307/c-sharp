@@ -13,6 +13,10 @@ dotnet add reference "<folder>/<file>.csproj" # подключить библи�
 dotnet run                                    # запуск проекта
 ```
 
+### Используемые ф-ции
+- [baseFunc.*](https://github.com/crasher307/c-sharp/blob/master/func/baseFunc.cs)
+- [rw.* (наследуется от baseFunc)](https://github.com/crasher307/c-sharp/blob/master/func/rw.cs)
+
 ### Практическая часть (семинары)
 1. Знакомство с языком программирования С#
 	- [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson1/work)
