@@ -1,18 +1,16 @@
-﻿// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿using func;
+
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
 
-bool getStr(string message, out string? variable) {
-	Console.Write($"{message}: ");
-	string str = Console.ReadLine();
-	bool result = int.TryParse(str, out int num);
-	variable = result ? $"{num}" : null;
-	return result;
-}
+// -------------------------------------------------------------------
 
-string? number = null;
-while (!getStr("Введите 3х значное число", out number) || number.Length != 3) {
-	Console.WriteLine("-- Попробуйте снова --");
+string num;
+while ((num = rw.getInt("Введите 3х значное число").ToString()).Length != 3) {
+	rw.echo("-- Попробуйте снова --");
 }
-Console.WriteLine($"number - {number}; result - {number[1]}");
+rw.echo($"2 цифра - {num[1]}");
+
+// -------------------------------------------------------------------
