@@ -1,27 +1,23 @@
-﻿// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+﻿using func;
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 // 6 -> да
 // 7 -> да
 // 1 -> нет
 
-bool getStr(string message, out string? variable) {
-	Console.Write($"{message}: ");
-	string str = Console.ReadLine();
-	bool result = int.TryParse(str, out int num);
-	variable = result ? str : null;
-	return result;
+// -------------------------------------------------------------------
+
+string[] week = new string[] {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
+
+int day = 0;
+bool res = false;
+while (res != true) {
+	day = rw.getInt("Введите номер дня недели") - 1;
+	if (day < 0 || day > 6) rw.echo("-- Попробуйте снова --");
+	else res = true;
 }
 
-int day = -1;
-string? number = null;
+bool weekEnd = day < 5;
+rw.echo((weekEnd ? "Нет" : "Да") + $", {week[day]} - " + (weekEnd ? "не " : "") + "выходной");
 
-while (day == null || day < 0 || day > 6) {
-	while (!getStr("Введите номер дня недели", out number) || number.Length != 1) {
-		Console.WriteLine("-- Попробуйте снова --");
-	}
-	day = int.Parse(number) - 1;
-}
-
-string[] week = {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
-bool res = day < 5;
-
-Console.WriteLine((res ? "Нет" : "Да") + $", {week[day]} - " + (res ? "не " : "") + "выходной");
+// -------------------------------------------------------------------
