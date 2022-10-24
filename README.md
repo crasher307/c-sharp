@@ -13,3 +13,7 @@ dotnet run         # запуск проекта
 2. Массивы и функции в программировании
 	- [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson2/work)
 	- [домашнее задание](https://github.com/crasher307/c-sharp/tree/master/lesson2/homework)
+3. Массивы и функции в программировании
+	- [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson3/work)
+4. Функции продолжение
+	- [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson4/work)
