@@ -1,10 +1,6 @@
 .vscode
 example*/
-functions
 
 **/bin
 **/obj
 *.csproj
-
-*.sh
-*.zip
