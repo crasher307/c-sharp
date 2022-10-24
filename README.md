@@ -3,14 +3,14 @@
 
 ```bash
 # Парамеры для работы скриптов вводятся по ходу
-sh create.sh        # создание нового проекта
-sh run.sh           # запуск проекта
+sh create.sh # создание нового проекта
+sh run.sh    # запуск проекта
 
 # DotNet
-dotnet new console  # новый проект
-dotnet new classlib # новая бибдиотека классов
+dotnet new console                            # новый проект
+dotnet new classlib                           # новая библиотека классов
 dotnet add reference "<folder>/<file>.csproj" # подключить библиотеку
-dotnet run          # запуск проекта
+dotnet run                                    # запуск проекта
 ```
 
 ### Практическая часть (семинары)
