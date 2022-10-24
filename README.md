@@ -2,8 +2,15 @@
 -----------------------------------------------
 
 ```bash
-dotnet new console # новый проект
-dotnet run         # запуск проекта
+# Парамеры для работы скриптов вводятся по ходу
+sh create.sh        # создание нового проекта
+sh run.sh           # запуск проекта
+
+# DotNet
+dotnet new console  # новый проект
+dotnet new classlib # новая бибдиотека классов
+dotnet add reference "<folder>/<file>.csproj" # подключить библиотеку
+dotnet run          # запуск проекта
 ```
 
 ### Практическая часть (семинары)
