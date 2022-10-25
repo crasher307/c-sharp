@@ -1,16 +1,17 @@
-# Создание папки с уроком - "createLesson.sh <git_dir> <lesson_number>"
+# createLesson.sh <homePath> <lessonNumber>
 
-### Получаемые параметры ####################
-home=$1 # Корневая папка `pwd`
-lessonNumber=$2 # Номер урока
-### Переменные ##############################
-folderLesson="lesson$lessonNumber"
-folderLessonWork="$folderLesson/work"
-folderLessonHome="$folderLesson/homework"
-#############################################
+fl="$1/lesson$2"
+flw="$fl/work"
+flh="$fl/homework"
 
-echo -e "\n--- Create lesson $lessonNumber ---"
+if ! [ -d $fl ]; then
+	mkdir $fl
+	! [ -d $flw ] && mkdir $flw
+	! [ -d $flh ] && mkdir $flh
+fi
 
-! [ -d $folderLesson ] && mkdir $home/$folderLesson && echo "Folder '$folderLesson/' created!" # Создание папки урока
-! [ -d $folderLessonWork ] && mkdir $home/$folderLessonWork && echo "Folder '$folderLessonWork/' created!" # Создание папки с работами во время семинара
-! [ -d $folderLessonHome ] && mkdir $home/$folderLessonHome && echo "Folder '$folderLessonHome/' created!" # Создание папки с домашними работами
+if [ -d $flw ] & [ -d $flh ]; then
+	echo "Lesson $2 created!"
+else
+	echo "ERROR: Lesson $2 not created!"
+fi

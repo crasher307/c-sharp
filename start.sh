@@ -1,8 +1,5 @@
-### Переменные ##############################
-home=`pwd`
-#############################################
-
-# Установка типа проекта
+homePath=`pwd`
+# Set project type
 while [ -z $projectType ]; do
 	clear
 	read -p "Is work project (y/n): " isWorkProject
@@ -10,63 +7,45 @@ while [ -z $projectType ]; do
 	elif [ $isWorkProject == "n" ]; then projectType="homework"
 	fi
 done
-
-# Установка номера урока
+# Set lesson number
 while [ -z $lessonNumber ]; do
 	clear
 	read -p "Enter lesson number: " lessonNumber
 	if [ -z $lessonNumber ]; then clear
 	else
-
 		folderLesson="lesson$lessonNumber"
-		# Создание папки с уроком
+		# Create lesson folder
 		while ! [ -d $folderLesson ]; do
 			clear
 			echo "Folder '$folderLesson' not found" && read -p "Create folder $folderLesson (y/n): " createLesson
-			if   [ $createLesson == "y" ]; then sh $home/bash/createLesson.sh $home $lessonNumber
+			if   [ $createLesson == "y" ]; then sh $homePath/bash/createLesson.sh $homePath $lessonNumber
 			elif [ $createLesson == "n" ]; then unset lessonNumber && break
 			fi
 		done
-
 	fi
 done
-
-#############################################
+# Run projects
 while true; do
 	clear
 	read -p "Enter project number: " projectNumber
 	if [ -z $projectNumber ]; then clear
 	else
-
 		folderProject="$folderLesson/$projectType/pr$projectNumber"
 		if ! [ -d $folderProject ]; then
-		### CREATE PROJECT ##################
-			# Создание и настройка папки с проектом
+			### CREATE PROJECT ##############
 			while ! [ -d $folderProject ]; do
 				clear
 				echo "Folder '$folderProject' not found" && read -p "Create project $projectNumber (y/n): " createProject
-				if   [ $createProject == "y" ]; then sh $home/bash/createProject.sh $home $lessonNumber $projectType $projectNumber
+				if   [ $createProject == "y" ]; then sh $homePath/bash/createProject.sh $homePath $lessonNumber $projectType $projectNumber
 				elif [ $createProject == "n" ]; then break
 				fi
 			done
-		#####################################
+			#################################
 		fi
 		if [ -d $folderProject ]; then
-			# Запуск проекта
-			sh $home/bash/runProject.sh $home $lessonNumber $projectType $projectNumber
+			### RUN PROJECT #################
+			sh $homePath/bash/runProject.sh $homePath $lessonNumber $projectType $projectNumber
+			#################################
 		fi
-
 	fi
 done
-#############################################
-
-# Текст    | Фон      | Цвет
-# \033[30m | \033[40m - black
-# \033[31m | \033[41m - red
-# \033[32m | \033[42m - green
-# \033[33m | \033[43m - yellow
-# \033[34m | \033[44m - blue
-# \033[35m | \033[45m - purple
-# \033[36m | \033[46m - white-blue
-# \033[37m | \033[47m - gray
-# \033[0m - сбросить
