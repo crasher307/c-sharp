@@ -20,11 +20,11 @@
 - [start.sh](https://github.com/crasher307/c-sharp/blob/master/start.sh) - создает или запускает проект, в зависимости от введенных параметров\
 	`sh start.sh`
 - bash/[createLesson.sh](https://github.com/crasher307/c-sharp/blob/master/bash/createLesson.sh) - создает папки урока/проекта\
-	`sh bash/createLesson.sh $gitFolder $lessonNumber`
+	`sh createLesson.sh <homePath> <lessonNumber>`
 - bash/[createProject.sh](https://github.com/crasher307/c-sharp/blob/master/bash/createProject.sh) - создает проект\
-	`sh bash/createProject.sh $gitFolder $lessonNumber <"work"|"homework"> $projectNumber"`
+	`sh createProject.sh <homePath> <lessonNumber> <projectType: "work"|"homework"> <projectNumber>`
 - bash/[runProject.sh](https://github.com/crasher307/c-sharp/blob/master/bash/runProject.sh) - запускает проект\
-	`sh bash/createProject.sh $gitFolder $lessonNumber <"work"|"homework"> $projectNumber"`
+	`sh runProject.sh <homePath> <lessonNumber> <projectType: "work"|"homework"> <projectNumber>`
 
 <br>
 
