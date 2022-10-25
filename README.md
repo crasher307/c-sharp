@@ -17,17 +17,18 @@
 <br>
 
 #### Bash скрипты для создания/запуска проектов
-- [create.sh](https://github.com/crasher307/c-sharp/blob/master/start.sh) - создает или запускает проект
-- bash
-	- [createLesson.sh](https://github.com/crasher307/c-sharp/blob/master/bash/createLesson.sh) - создает папки урока/проекта `sh bash/createLesson.sh $gitFolder $lessonNumber`
-	- [createProject.sh](https://github.com/crasher307/c-sharp/blob/master/bash/createProject.sh) - создает проект `sh bash/createProject.sh $gitFolder $lessonNumber <"work"|"homework"> $projectNumber"`
-	- [runProject.sh](https://github.com/crasher307/c-sharp/blob/master/bash/runProject.sh) - запускает проект `sh bash/createProject.sh $gitFolder $lessonNumber <"work"|"homework"> $projectNumber"`
+- [start.sh](https://github.com/crasher307/c-sharp/blob/master/start.sh) - создает или запускает проект, в зависимости от введенных параметров\
+	`sh start.sh`
+- bash/[createLesson.sh](https://github.com/crasher307/c-sharp/blob/master/bash/createLesson.sh) - создает папки урока/проекта\
+	`sh bash/createLesson.sh $gitFolder $lessonNumber`
+- bash/[createProject.sh](https://github.com/crasher307/c-sharp/blob/master/bash/createProject.sh) - создает проект\
+	`sh bash/createProject.sh $gitFolder $lessonNumber <"work"|"homework"> $projectNumber"`
+- bash/[runProject.sh](https://github.com/crasher307/c-sharp/blob/master/bash/runProject.sh) - запускает проект\
+	`sh bash/createProject.sh $gitFolder $lessonNumber <"work"|"homework"> $projectNumber"`
 
 <br>
 
 ```bash
-sh start.sh # создание/запуск проекта (парамеры вводятся по ходу)
-
 # DotNet
 dotnet new console                            # новый проект
 dotnet new classlib                           # новая библиотека классов
