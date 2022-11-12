@@ -13,7 +13,7 @@ int[] multi(int[] array) {
 	return newArr;
 }
 
-int[] arr = ar.init(5, 1, 10);
+int[] arr = ar.initInt(5, 1, 10);
 int[] arrSumm = multi(arr);
 
 ar.echoArrayInt(arr);

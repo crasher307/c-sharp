@@ -6,7 +6,7 @@ using func;
 
 // -------------------------------------------------------------------
 
-int[] numbersArray = ar.init(rw.getInt("Введите кол-во эл-ов", true), -99, 99);
+int[] numbersArray = ar.initInt(rw.getInt("Введите кол-во эл-ов", true), -99, 99);
 int summ = 0;
 for (int i = 1; i < numbersArray.Length; i += 2) summ += numbersArray[i];
 

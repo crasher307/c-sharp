@@ -5,19 +5,19 @@ using func;
 
 // -------------------------------------------------------------------
 
-(int min, int max, int diff) search(int[] arr) {
-	int min = arr[0], max = arr[0];
+(double min, double max, double diff) search(double[] arr) {
+	double min = arr[0], max = arr[0];
 	foreach (var item in arr) {
 		if (item < min) min = item;
 		if (item > max) max = item;
 	}
-	return (min, max, max - min);
+	return (min, max, Math.Round(max - min, 2));
 }
 
-int[] numbersArray = ar.init(rw.getInt("Введите кол-во эл-ов", true), 0, 99);
-(int min, int max, int diff) = search(numbersArray);
+double[] numbersArray = ar.initDouble(rw.getInt("Введите кол-во эл-ов", true), -99, 99);
+(double min, double max, double diff) = search(numbersArray);
 
-ar.echoArrayInt(numbersArray);
+ar.echoArrayDouble(numbersArray);
 rw.echo($"Разница между максимальным ({max}) и минимальным ({min}) эл-ами массива: {diff}");
 
 // -------------------------------------------------------------------

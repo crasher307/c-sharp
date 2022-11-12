@@ -11,7 +11,7 @@ int[] replaceNubers(int[] arrayNumbers) {
 	return arr;
 }
 
-int[] numbersArray = ar.init(4, -9, 9);
+int[] numbersArray = ar.initInt(4, -9, 9);
 int[] replaceArray = replaceNubers(numbersArray);
 
 ar.echoArrayInt(numbersArray);

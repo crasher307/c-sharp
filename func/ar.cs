@@ -2,7 +2,7 @@
 
 public class ar : baseFunc {
 	// Генерация массива
-	public static int[] init(int count = 10, int minValue = 0, int maxValue = 1) {
+	public static int[] initInt(int count = 10, int minValue = 0, int maxValue = 1) {
 		maxValue++;
 		Random rnd = new Random();
 
@@ -10,10 +10,28 @@ public class ar : baseFunc {
 		for (int i = 0; i < array.Length; i++) array[i] = rnd.Next(minValue, maxValue);
 		return array;
 	}
+	// Генерация массива с плав. точкой
+	public static double[] initDouble(int count = 10, int minValue = 0, int maxValue = 1) {
+		maxValue++;
+		Random rnd = new Random();
+
+		double[] array = new double[count];
+		double num;
+		for (int i = 0; i < array.Length; i++) {
+			num = rnd.Next(minValue, maxValue);
+			if (num < 0) num += rnd.NextDouble();
+			if (num > 0) num -= rnd.NextDouble();
+			array[i] = Math.Round(num, 2);
+		}
+		return array;
+	}
 	
-	// Вывод массива
-	public static void echoArrayInt(int[] array, string message = "Массив чисел") {
-		string result = String.Join(", ", array);
-		rw.echo($"{message}: {result}");
+	// Вывод массива int
+	public static void echoArrayInt(int[] array, string message = "Массив чесел") {
+		rw.echo($"{message}: {String.Join("; ", array)};");
+	}
+	// Вывод массива double
+	public static void echoArrayDouble(double[] array, string message = "Массив чисел") {
+		rw.echo($"{message}: {String.Join("; ", array)};");
 	}
 }
