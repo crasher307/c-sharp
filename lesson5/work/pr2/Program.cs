@@ -7,9 +7,7 @@ using func;
 
 int[] replaceNubers(int[] arrayNumbers) {
 	int[] arr = new int[arrayNumbers.Length];
-	for (int i = 0; i < arr.Length; i++) {
-		arr[i] = arrayNumbers[i] * -1;
-	}
+	for (int i = 0; i < arr.Length; i++) arr[i] = arrayNumbers[i] * -1;
 	return arr;
 }
 
