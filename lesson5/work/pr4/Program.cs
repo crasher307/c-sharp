@@ -14,10 +14,9 @@ int search(int needMin, int needMax, int[] array) {
 	return count;
 }
 
-int min = 10;
-int max = 99;
-
+int min = 10, max = 99;
 int[] arr = ar.init(123, -20, 200);
+
 int srchCount = search(min, max, arr);
 
 ar.echoArrayInt(arr);
