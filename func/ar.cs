@@ -13,8 +13,7 @@ public class ar : baseFunc {
 	
 	// Вывод массива
 	public static void echoArrayInt(int[] array, string message = "Массив чисел") {
-		string result = "";
-		for (int i = 0; i < array.Length; i++) result += (i == 0 ? "" : ", ") + $"{array[i]}";
+		string result = String.Join(", ", array);
 		rw.echo($"{message}: {result}");
 	}
 }
