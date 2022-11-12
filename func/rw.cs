@@ -12,14 +12,16 @@ public class rw : baseFunc {
 	}
 	
 	// Ввод числа
-	public static int getInt(string message = "Введите число") {
+	public static int getInt(string message = "Введите число", bool onlyPositive = false) {
 		message += " (int)";
 
 		int parse;
 		bool result;
-
-		while (!(result = int.TryParse(get(message), out parse))) {
+		bool positive = !onlyPositive;
+		
+		while (!(result = int.TryParse(get(message), out parse)) || !(positive = parse > 0 || !onlyPositive)) {
 			if (!result) error("Error type", "Требуется тип int");
+			else if (!positive) error("Error number", "Требуется положительное число");
 		}
 		echo("--- --- --- --- ---");
 

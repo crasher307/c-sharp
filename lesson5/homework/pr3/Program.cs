@@ -14,7 +14,7 @@ using func;
 	return (min, max, max - min);
 }
 
-int[] numbersArray = ar.init(4, 0, 99);
+int[] numbersArray = ar.init(rw.getInt("Введите кол-во эл-ов", true), 0, 99);
 (int min, int max, int diff) = search(numbersArray);
 
 ar.echoArrayInt(numbersArray);
