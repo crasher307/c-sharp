@@ -6,7 +6,7 @@ using func;
 // -------------------------------------------------------------------
 
 (int min, int max, int diff) search(int[] arr) {
-	int min = 0, max = 0;
+	int min = arr[0], max = arr[0];
 	foreach (var item in arr) {
 		if (item < min) min = item;
 		if (item > max) max = item;
@@ -14,7 +14,7 @@ using func;
 	return (min, max, max - min);
 }
 
-int[] numbersArray = ar.init(4, -99, 99);
+int[] numbersArray = ar.init(4, 0, 99);
 (int min, int max, int diff) = search(numbersArray);
 
 ar.echoArrayInt(numbersArray);
