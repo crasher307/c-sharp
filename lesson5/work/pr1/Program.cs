@@ -67,5 +67,4 @@ PrintArray(array);
 (int positiveSumm, int negativeSumm) = GetPositiveAndNegativeSumm(array);
 
 Console.WriteLine($"Сумма положительных: {positiveSumm}, сумма отрицательных: {negativeSumm}");
-
 */
