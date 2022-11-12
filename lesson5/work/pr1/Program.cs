@@ -6,8 +6,7 @@ using func;
 // -------------------------------------------------------------------
 
 (int positiveSumm, int negativeSumm) getPosAndNegSumm(int[] arrayNumbers) {
-	int positiveSumm = 0;
-	int negativeSumm = 0;
+	int positiveSumm = 0, negativeSumm = 0;
 	for (int i = 0; i < arrayNumbers.Length; i++) {
 		if (arrayNumbers[i] > 0) positiveSumm += arrayNumbers[i];
 		else negativeSumm += arrayNumbers[i];
