@@ -99,3 +99,16 @@ dotnet run                                            # запуск проек�
         - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson5/homework/pr2/Program.cs) - задает массив случайных чисел, ищет сумму элементов, стоящих на нечётных позициях.
         - [pr3](https://github.com/crasher307/c-sharp/blob/master/lesson5/homework/pr3/Program.cs) - задает массив вещественных чисел, ищет разницу между максимальным и минимальным элементами массива.
 	</details>
+
+- <details><summary>Урок 6. Двумерные массивы и рекурсия</summary>
+
+	Напишите программу, которая:
+    - [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson6/work)
+        - [pr1](https://github.com/crasher307/c-sharp/blob/master/lesson6/work/pr1/Program.cs) - принимает на вход 3 числа и проверяет, может ли существовать треугольник со сторонами такой длины.
+        - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson6/work/pr2/Program.cs) - будет преобразовывать десятичное число в двоичное.
+        - [pr3](https://github.com/crasher307/c-sharp/blob/master/lesson6/work/pr3/Program.cs) - не используя рекурсию, выводит первые N чисел Фибоначчи.
+        - [pr4](https://github.com/crasher307/c-sharp/blob/master/lesson6/work/pr4/Program.cs) - будет создавать копию заданного массива с помощью поэлементного копирования.
+    - [домашнее задание](https://github.com/crasher307/c-sharp/blob/master/lesson6/homework)
+        - [pr1](https://github.com/crasher307/c-sharp/blob/master/lesson6/homework/pr1/Program.cs) - ???
+        - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson6/homework/pr2/Program.cs) - ???
+	</details>
