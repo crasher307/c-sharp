@@ -15,7 +15,7 @@ int search(int needMin, int needMax, int[] array) {
 }
 
 int min = 10, max = 99;
-int[] arr = ar.initInt(123, -20, 200);
+int[] arr = ar.init(123, -20, 200);
 
 int srchCount = search(min, max, arr);
 

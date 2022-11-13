@@ -9,7 +9,7 @@ void copyArray<type>(type[] array, out type[] newArray) {
 	for (int i = 0; i < array.Length; i++) newArray[i] = array[i];
 }
 
-int[] array = ar.initInt(rw.getInt("Введите кол-во элементов", true), 100, 999);
+int[] array = ar.init(rw.getInt("Введите кол-во элементов", true), 100, 999);
 copyArray(array, out int[] newArray);
 
 rw.echo($"Init array: {String.Join(", ", array)}\n\nResult array: {String.Join(", ", newArray)}");

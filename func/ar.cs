@@ -1,8 +1,13 @@
 ﻿namespace func;
 
 public class ar : baseFunc {
+	// Вывод массива
+	public static void echoArray<T>(T[] array, string message = "Массив чесел") {
+		rw.echo($"{message}: {String.Join("; ", array)};");
+	}
+
 	// Генерация массива
-	public static int[] initInt(int count = 10, int minValue = 0, int maxValue = 1) {
+	public static int[] init(int count = 10, int minValue = 0, int maxValue = 1) {
 		maxValue++;
 		Random rnd = new Random();
 
@@ -24,10 +29,5 @@ public class ar : baseFunc {
 			array[i] = Math.Round(num, 2);
 		}
 		return array;
-	}
-	
-	// Вывод массива
-	public static void echoArray<T>(T[] array, string message = "Массив чесел") {
-		rw.echo($"{message}: {String.Join("; ", array)};");
 	}
 }

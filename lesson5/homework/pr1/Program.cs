@@ -5,7 +5,7 @@ using func;
 
 // -------------------------------------------------------------------
 
-int[] numbersArray = ar.initInt(rw.getInt("Введите кол-во эл-ов", true), 100, 999);
+int[] numbersArray = ar.init(rw.getInt("Введите кол-во эл-ов", true), 100, 999);
 int count = 0;
 foreach (var item in numbersArray) if (item % 2 == 0) count++;
 
