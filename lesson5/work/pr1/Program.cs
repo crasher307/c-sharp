@@ -17,7 +17,7 @@ using func;
 int[] numbersArray = ar.initInt(12, -9, 9);
 (int posSumm, int negSumm) = getPosAndNegSumm(numbersArray);
 
-ar.echoArrayInt(numbersArray);
+ar.echoArray(numbersArray);
 rw.echo($"Сумма чисел:\n\tпозитивных: {posSumm}\n\tнегативных: {negSumm}");
 
 // -------------------------------------------------------------------

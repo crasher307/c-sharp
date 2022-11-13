@@ -17,7 +17,7 @@ using func;
 double[] numbersArray = ar.initDouble(rw.getInt("Введите кол-во эл-ов", true), -99, 99);
 (double min, double max, double diff) = search(numbersArray);
 
-ar.echoArrayDouble(numbersArray);
+ar.echoArray(numbersArray);
 rw.echo($"Разница между максимальным ({max}) и минимальным ({min}) эл-ами массива: {diff}");
 
 // -------------------------------------------------------------------

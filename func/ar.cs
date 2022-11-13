@@ -26,12 +26,8 @@ public class ar : baseFunc {
 		return array;
 	}
 	
-	// Вывод массива int
-	public static void echoArrayInt(int[] array, string message = "Массив чесел") {
-		rw.echo($"{message}: {String.Join("; ", array)};");
-	}
-	// Вывод массива double
-	public static void echoArrayDouble(double[] array, string message = "Массив чисел") {
+	// Вывод массива
+	public static void echoArray<T>(T[] array, string message = "Массив чесел") {
 		rw.echo($"{message}: {String.Join("; ", array)};");
 	}
 }

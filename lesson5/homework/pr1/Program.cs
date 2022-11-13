@@ -9,7 +9,7 @@ int[] numbersArray = ar.initInt(rw.getInt("Введите кол-во эл-ов"
 int count = 0;
 foreach (var item in numbersArray) if (item % 2 == 0) count++;
 
-ar.echoArrayInt(numbersArray);
+ar.echoArray(numbersArray);
 rw.echo($"Четных чисел: {count}");
 
 // -------------------------------------------------------------------

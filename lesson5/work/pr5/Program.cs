@@ -16,8 +16,8 @@ int[] multi(int[] array) {
 int[] arr = ar.initInt(5, 1, 10);
 int[] arrSumm = multi(arr);
 
-ar.echoArrayInt(arr);
-ar.echoArrayInt(arrSumm, "Произведение пар чисел");
+ar.echoArray(arr);
+ar.echoArray(arrSumm, "Произведение пар чисел");
 
 // -------------------------------------------------------------------
 

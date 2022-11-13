@@ -10,7 +10,7 @@ int[] numbersArray = ar.initInt(rw.getInt("Введите кол-во эл-ов"
 int summ = 0;
 for (int i = 1; i < numbersArray.Length; i += 2) summ += numbersArray[i];
 
-ar.echoArrayInt(numbersArray);
+ar.echoArray(numbersArray);
 rw.echo($"Сумма эл-ов на нечет. позициях: {summ}");
 
 // -------------------------------------------------------------------

@@ -13,7 +13,7 @@ bool search(int need, int[] array) {
 int[] arr = {6, 7, 19, 345, 3};
 int srch = rw.getInt("Введите искомое число");
 
-ar.echoArrayInt(arr);
+ar.echoArray(arr);
 rw.echo($"Искомое: {srch}; " + (search(srch, arr) ? "" : "не ") + "найдено");
 
 // -------------------------------------------------------------------

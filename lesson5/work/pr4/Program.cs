@@ -19,7 +19,7 @@ int[] arr = ar.initInt(123, -20, 200);
 
 int srchCount = search(min, max, arr);
 
-ar.echoArrayInt(arr);
+ar.echoArray(arr);
 rw.echo($"Чисел в диапазоне от {min} до {max}: {srchCount}");
 
 // -------------------------------------------------------------------

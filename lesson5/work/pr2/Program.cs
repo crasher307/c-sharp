@@ -14,8 +14,8 @@ int[] replaceNubers(int[] arrayNumbers) {
 int[] numbersArray = ar.initInt(4, -9, 9);
 int[] replaceArray = replaceNubers(numbersArray);
 
-ar.echoArrayInt(numbersArray);
-ar.echoArrayInt(replaceArray, "Измененный массив");
+ar.echoArray(numbersArray);
+ar.echoArray(replaceArray, "Измененный массив");
 
 // -------------------------------------------------------------------
 
