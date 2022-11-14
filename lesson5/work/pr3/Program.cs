@@ -6,9 +6,7 @@ using func;
 
 // -------------------------------------------------------------------
 
-bool search(int need, int[] array) {
-	return array.Contains(need) || array.Contains(-need);
-}
+bool search(int need, int[] array) => array.Contains(need) || array.Contains(-need);
 
 int[] arr = {6, 7, 19, 345, 3};
 int srch = rw.getInt("Введите искомое число");

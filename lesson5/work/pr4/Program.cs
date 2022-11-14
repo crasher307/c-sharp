@@ -15,11 +15,12 @@ int search(int needMin, int needMax, int[] array) {
 }
 
 int min = 10, max = 99;
-int[] arr = ar.init(123, -20, 200);
+var numbersArray = new int[rw.getInt("Введите кол-во эл-ов", true)];
+ar.init(numbersArray, -99, 99);
 
-int srchCount = search(min, max, arr);
+int srchCount = search(min, max, numbersArray);
 
-ar.echoArray(arr);
+ar.echoArray(numbersArray);
 rw.echo($"Чисел в диапазоне от {min} до {max}: {srchCount}");
 
 // -------------------------------------------------------------------

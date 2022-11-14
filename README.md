@@ -109,6 +109,6 @@ dotnet run                                            # запуск проек�
         - [pr3](https://github.com/crasher307/c-sharp/blob/master/lesson6/work/pr3/Program.cs) - не используя рекурсию, выводит первые N чисел Фибоначчи.
         - [pr4](https://github.com/crasher307/c-sharp/blob/master/lesson6/work/pr4/Program.cs) - будет создавать копию заданного массива с помощью поэлементного копирования.
     - [домашнее задание](https://github.com/crasher307/c-sharp/blob/master/lesson6/homework)
-        - [pr1](https://github.com/crasher307/c-sharp/blob/master/lesson6/homework/pr1/Program.cs) - ???
+        - [pr1](https://github.com/crasher307/c-sharp/blob/master/lesson6/homework/pr1/Program.cs) - принимает на вход N чисел, считает, сколько чисел больше 0 ввёл пользователь.
         - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson6/homework/pr2/Program.cs) - ???
 	</details>

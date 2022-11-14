@@ -6,11 +6,13 @@ using func;
 
 // -------------------------------------------------------------------
 
-int[] numbersArray = ar.init(rw.getInt("Введите кол-во эл-ов", true), -99, 99);
+var numbersArray = new int[rw.getInt("Введите кол-во эл-ов", true)];
+ar.init(numbersArray, -99, 99);
+
 int summ = 0;
 for (int i = 1; i < numbersArray.Length; i += 2) summ += numbersArray[i];
 
 ar.echoArray(numbersArray);
-rw.echo($"Сумма эл-ов на нечет. позициях: {summ}");
+rw.echo($"Сумма элементов на нечетных позициях: {summ}");
 
 // -------------------------------------------------------------------

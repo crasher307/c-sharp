@@ -11,7 +11,8 @@ int[] replaceNubers(int[] arrayNumbers) {
 	return arr;
 }
 
-int[] numbersArray = ar.init(4, -9, 9);
+var numbersArray = new int[rw.getInt("Введите кол-во эл-ов", true)];
+ar.init(numbersArray, -9, 9);
 int[] replaceArray = replaceNubers(numbersArray);
 
 ar.echoArray(numbersArray);

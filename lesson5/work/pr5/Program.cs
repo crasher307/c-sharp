@@ -6,17 +6,18 @@ using func;
 
 // -------------------------------------------------------------------
 
-int[] multi(int[] array) {
-	int count = array.Length / 2 + array.Length % 2;
-	int[] newArr = new int[count];
-	for (int i = 0, k = array.Length - 1; i < count; i++, k--) newArr[i] = (i == k) ? array[i] : array[i] * array[k];
-	return newArr;
+int[] multi(int[] a) {
+    int[] b = new int[a.Length / 2 + a.Length % 2];
+	Array.Copy(a, b, b.Length);
+	for (int i = 0, k = a.Length - 1; i < b.Length; i++, k--) if (i != k) b[i] *= a[k];
+	return b;
 }
 
-int[] arr = ar.init(5, 1, 10);
-int[] arrSumm = multi(arr);
+var numbersArray = new int[rw.getInt("Введите кол-во эл-ов", true)];
+ar.init(numbersArray, 1, 3);
+int[] arrSumm = multi(numbersArray);
 
-ar.echoArray(arr);
+ar.echoArray(numbersArray);
 ar.echoArray(arrSumm, "Произведение пар чисел");
 
 // -------------------------------------------------------------------

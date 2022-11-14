@@ -14,7 +14,8 @@ using func;
 	return (positiveSumm, negativeSumm);
 }
 
-int[] numbersArray = ar.init(12, -9, 9);
+var numbersArray = new int[12];
+ar.init(numbersArray, -9, 9);
 (int posSumm, int negSumm) = getPosAndNegSumm(numbersArray);
 
 ar.echoArray(numbersArray);

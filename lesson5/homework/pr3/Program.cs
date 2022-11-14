@@ -14,7 +14,8 @@ using func;
 	return (min, max, Math.Round(max - min, 2));
 }
 
-double[] numbersArray = ar.initDouble(rw.getInt("Введите кол-во эл-ов", true), -99, 99);
+var numbersArray = new double[rw.getInt("Введите кол-во эл-ов", true)];
+ar.init(numbersArray, -99, 99);
 (double min, double max, double diff) = search(numbersArray);
 
 ar.echoArray(numbersArray);
