@@ -5,9 +5,9 @@ ff="$1/func"
 
 if [ -d $fp ] & [ -d $ff ]; then
 	cd $ff && dotnet build && clear
-	echo -e "\033[32m[ --------------------- START --------------------- ] \033[33m($3, lesson $2, project $4)\033[0m\n\n"
+	echo -e "\033[32m[ --------------------- START --------------------- ] \033[33m($3, lesson $2, project $4)\033[0m\n"
 	cd $fp && dotnet run
-	echo -e "\n\n\033[31m[ ---------------------- END ---------------------- ]\033[0m"
+	echo -e "\n\033[31m[ ---------------------- END ---------------------- ]\033[0m"
 	read -s -n 1 -p "Press any key to continue ..."
 else
 	echo "ERROR: Project $4 not started!"
