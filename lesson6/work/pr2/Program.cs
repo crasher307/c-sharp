@@ -7,6 +7,8 @@ using func;
 
 // -------------------------------------------------------------------
 
+// TODO работает некорректно, если используются символы не из словаря
+
 (char[] value, int count) toChars<type>(type value) {
 	int count = ($"{value}").Length;
 	char[] chars = new char[count];

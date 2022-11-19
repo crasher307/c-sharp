@@ -15,8 +15,17 @@ bool checkTriangle<type>(type[] triangle) {
 	return !check.Contains(false);
 }
 
+int notUse;
+bool[] isInt = {false, false, false};
+bool allInt = false;
 string[] triangle;
-while ((triangle = rw.getStr("Введите 3 стороны треугольника через пробел").Split(" ")).Length != 3) rw.echo("-- Нужно ввести 3 стороны --");
+do {
+    triangle = rw.getStr("Введите 3 стороны треугольника через пробел").Split(" ");
+    for (int i = 0; i < triangle.Length; i++) isInt[i] = (bool) int.TryParse($"{triangle[i]}", out notUse);
+    allInt = !isInt.Contains(false);
+    if (triangle.Length != 3) rw.echo("-- Нужно ввести 3 стороны --");
+    else if (!allInt) rw.echo("-- Нужно ввести целые числа --");
+} while (triangle.Length != 3 || !allInt);
 
 rw.echo($"Треугольник со сторонами [{String.Join(", ", triangle)}] " + (checkTriangle(triangle) ? "" : "не ") + "существует");
 

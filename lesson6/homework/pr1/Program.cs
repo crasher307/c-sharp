@@ -6,14 +6,20 @@ using func;
 
 // -------------------------------------------------------------------
 
-string[] read = rw.getStr("Введите числа через пробел").Split(" ");
-int[] numbers = new int[read.Length];
-int countPositive = 0;
-for (int i = 0; i < read.Length; i++) {
-	int.TryParse(read[i], out numbers[i]);
-	if (numbers[i] > 0) countPositive++;
+bool check(string[] read, out int[] numbers) {
+	var length = read.Length;
+	var isInt = new bool[length];
+	numbers = new int[length];
+	for (int i = 0; i < length; i++) isInt[i] = int.TryParse(read[i], out numbers[i]);
+	return isInt.Contains(false);
 }
 
-rw.echo($"Положительных чисел: {countPositive}");
+int[] numbers;
+while (check(rw.getStr("Введите числа через пробел").Split(" "), out numbers)) rw.echo("-- Попробуйте снова --");
+
+int positive = 0;
+foreach (var item in numbers) if (item > 0) positive++;
+
+rw.echo($"Положительных чисел: {positive}");
 
 // -------------------------------------------------------------------
