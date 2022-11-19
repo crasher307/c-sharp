@@ -8,9 +8,7 @@ using func;
 // -------------------------------------------------------------------
 
 string num;
-while ((num = rw.getInt("Введите 5ти значное число").ToString()).Length != 5) {
-	rw.echo("-- Попробуйте снова --");
-}
+while ((num = rw.getInt("Введите 5ти значное число", true).ToString()).Length != 5) rw.echo("-- Попробуйте снова --");
 
 char[] reverse = num.ToCharArray();
 Array.Reverse(reverse);

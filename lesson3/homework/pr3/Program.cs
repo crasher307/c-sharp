@@ -6,7 +6,7 @@ using func;
 
 // -------------------------------------------------------------------
 
-int num = rw.getInt();
+int num = rw.getInt("Введите число", true);
 for (int i = 1; i <= num; i++) {
 	if (i != 1) rw.echo(", ", false);
 	rw.echo($"{Math.Pow(i, 3)}", false);
