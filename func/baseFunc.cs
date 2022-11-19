@@ -23,6 +23,14 @@ public class baseFunc {
 		else Console.Write(message);
 		Console.ResetColor();
 	}
+	public static void echoObject(string message, object obj, bool ln = true) {
+		Console.ForegroundColor = ConsoleColor.Yellow;
+		
+		if (ln == true) Console.WriteLine(message, obj);
+		else Console.Write(message, obj);
+
+		Console.ResetColor();
+	}
 	
 	// Вывод ошибок
 	public static void error(string type, string message) {

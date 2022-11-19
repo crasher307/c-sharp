@@ -2,8 +2,20 @@
 
 public class ar : baseFunc {
 	// Вывод массива
-	public static void echoArray<T>(T[] array, string message = "Массив чесел") {
+	public static void echoArray<T>(T[] array, string message = "Массив") {
 		rw.echo($"{message}: {String.Join("; ", array)};");
+	}
+
+	// Вывод матрицы
+	public static void echoMatrix<T>(T[,] matrix, string message = "Матрица") {
+		var view = matrix.GetEnumerator();
+		int cols = matrix.GetLength(matrix.Rank - 1);
+
+		rw.echo($"{message}:");
+		for (int i = 1; view.MoveNext(); i++) {
+			if (i > cols) i = 1;
+			rw.echoObject("{0}\t", view.Current, i == cols);
+		}
 	}
 
 	// Генерация массива
