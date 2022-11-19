@@ -1,67 +1,86 @@
 ﻿namespace func;
 
 public class rw : baseFunc {
-	// Ввод строки
-	public static string getStr(string message = "Введите строку") {
-		message += " (string)";
+	public static string messageGet = "Ожидается ввод";
 
-		string parse = get(message);
-		echo("--- --- --- --- ---");
-
-		return parse;
-	}
-	
-	// Ввод числа
-	public static int getInt(string message = "Введите число", bool onlyPositive = false) {
-		message += " (int)";
-
-		int parse;
-		bool result;
-		bool positive = !onlyPositive;
-		
-		while (!(result = int.TryParse(get(message), out parse)) || !(positive = parse > 0 || !onlyPositive)) {
-			if (!result) error("Error type", "Требуется тип int");
-			else if (!positive) error("Error number", "Требуется положительное число");
+	// Вывод
+	public static void echo(string message, bool ln = true, string color = "echo") {
+		switch (color) {
+			case "get":
+				Console.ForegroundColor = ConsoleColor.Blue;
+				message = $"{message}: ";
+				break;
+			case "echo":
+				Console.ForegroundColor = ConsoleColor.Yellow;
+				break;
 		}
-		echo("--- --- --- --- ---");
-
-		return parse;
-	}
-
-	// Ввод числа с плав. точкой
-	public static float getFloat(string message = "Введите число") {
-		message += " (float)";
-
-		float parse;
-		bool result;
-
-		while (!(result = float.TryParse(get(message), out parse))) {
-			if (!result) error("Error type", "Требуется тип float");
-		}
-		echo("--- --- --- --- ---");
 		
-		return parse;
+		if (ln == true) Console.WriteLine(message);
+		else Console.Write(message);
+		Console.ResetColor();
+	}
+	public static void echoObject(string message, object obj, bool ln = true) {
+		Console.ForegroundColor = ConsoleColor.Yellow;
+		
+		if (ln == true) Console.WriteLine(message, obj);
+		else Console.Write(message, obj);
+
+		Console.ResetColor();
 	}
 
-	// Ввод true/false
-	public static bool getBool(string message = "Введите да/нет") {
-		message += " (y/n)";
+	// Ввод
+	// (int, float, double) option - только положительные числа
+	public static bool get<T>(out T variable, string? message = null, bool option = false) {
+		string type = typeof(T).Name;
+		string read = String.Empty;
+		bool isConvert = false;
 
-		bool parse = false;
-		bool result = false;
-		string value;
+		message = $"({type}) " + (message ?? messageGet);
+		variable = default(T) ?? (T) Convert.ChangeType("null", typeof(T));
 
-		string[] yes = {"y", "yes", "д", "да"};
-		string[] no = {"n", "no", "н", "нет"};
-		
-		while (!result) {
-			value = get(message).ToLower();
-			if (yes.Contains(value)) value = "true";
-			if (no.Contains(value)) value = "false";
-			if (!(result = bool.TryParse(value, out parse))) error("Error type", "Требуется тип bool");
+		while (!isConvert) {
+			echo(message, false, "get");
+			read = Console.ReadLine() ?? "null";
+
+			try {
+				variable = (T) Convert.ChangeType(read, typeof(T));
+				isConvert = !option ? true : getOption(ref variable);
+			} catch {
+				error("Error type", $"Ожидается тип {type}");
+			}
 		}
-		echo("--- --- --- --- ---");
-		
+		return isConvert;
+	}
+	public static bool getOption<T>(ref T variable) {
+		string? errorMessage = null;
+		switch (typeof(T).Name) {
+			case "Int16":
+			case "Int32": // int
+			case "Single": // float
+			case "Double": // double
+				double valueNumber = variable == null ? 0 : (double) Convert.ChangeType(variable, typeof(double));
+				if (valueNumber <= 0) errorMessage = "Ожидается положительное число";
+				break;
+		}
+		if (errorMessage != null) rw.error(errorMessage);
+		return errorMessage == null;
+	}
+
+	// TODO delete
+	public static string getStr(string message = "Введите строку") { // TODO обратная совместимость
+		get(out string parse, message);
+		return parse;
+	}
+	public static int getInt(string message = "Введите число", bool onlyPositive = false) { // TODO обратная совместимость
+		get(out int parse, message, onlyPositive);
+		return parse;
+	}
+	public static float getFloat(string message = "Введите число", bool onlyPositive = false) { // TODO обратная совместимость
+		get(out float parse, message, onlyPositive);
+		return parse;
+	}
+	public static bool getBool(string message = "Введите да/нет") { // TODO обратная совместимость
+		get(out bool parse, message);
 		return parse;
 	}
 }

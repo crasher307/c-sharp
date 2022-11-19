@@ -1,12 +1,12 @@
 ﻿namespace func;
 
 public class ar : baseFunc {
-	// Вывод массива
+	// Вывод массива (TODO *1 Переписать на 1 ф-цию)
 	public static void echoArray<T>(T[] array, string message = "Массив") {
 		rw.echo($"{message}: {String.Join("; ", array)};");
 	}
 
-	// Вывод матрицы
+	// Вывод матрицы (TODO *1)
 	public static void echoMatrix<T>(T[,] matrix, string message = "Матрица") {
 		var view = matrix.GetEnumerator();
 		int cols = matrix.GetLength(matrix.Rank - 1);
@@ -18,25 +18,24 @@ public class ar : baseFunc {
 		}
 	}
 
-	// Генерация массива
+	// Генерация массива (TODO *2 Переписать на 1 ф-цию)
 	public static void init<T>(T[] array, int minValue = 0, int maxValue = 1) {
 		// var numbersArray = new int[??] | new double[??];
-		// ar.initNew(numbersArray, 100, 999);
-		maxValue++;
-		Random rnd = new Random();
+		// ar.init(numbersArray, 100, 999);
 
-		bool isDouble = typeof(T).Name == "Double";
-		string[] types = {"Int16", "Int32", "Double"};
+		for (int i = 0; i < array.Length; i++) {
+			array[i] = rand.init<T>(minValue, maxValue);
+		}
+	}
 
-		if ((types).Contains(typeof(T).Name)) {
-			double num;
-			for (int i = 0; i < array.Length; i++) {
-				num = rnd.Next(minValue, maxValue);
-				if (isDouble) {
-					if (num < 0) num += rnd.NextDouble();
-					if (num > 0) num -= rnd.NextDouble();
-				}
-				array[i] = (T) Convert.ChangeType(Math.Round(num, isDouble ? 2 : 0), typeof(T));
+	// Генерация матрицы (TODO *2)
+	public static void initMatrix<T>(T[,] array, int minValue = 0, int maxValue = 1) {
+		// var matrix = new int[??, ??] | new double[??, ??];
+		// ar.initMatrix(matrix, 100, 999);
+		
+		for (int i = 0; i < array.GetLength(0); i++) {
+			for (int k = 0; k < array.GetLength(1); k++) {
+				array[i, k] = rand.init<T>(minValue, maxValue);
 			}
 		}
 	}

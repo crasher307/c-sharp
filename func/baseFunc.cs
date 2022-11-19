@@ -1,39 +1,11 @@
 ﻿namespace func;
 
 public class baseFunc {
-	// Считывание ввода
-	public static string get(string message = "Введите строку") {
-		echo(message, false, "get");
-		return Console.ReadLine() ?? "";
-	}
-	
-	// Вывод сообщения
-	public static void echo(string message, bool ln = true, string color = "echo") {
-		switch (color) {
-			case "get":
-				Console.ForegroundColor = ConsoleColor.Blue;
-				message = $"{message}: ";
-				break;
-			case "echo":
-				Console.ForegroundColor = ConsoleColor.Yellow;
-				break;
-		}
-		
-		if (ln == true) Console.WriteLine(message);
-		else Console.Write(message);
-		Console.ResetColor();
-	}
-	public static void echoObject(string message, object obj, bool ln = true) {
-		Console.ForegroundColor = ConsoleColor.Yellow;
-		
-		if (ln == true) Console.WriteLine(message, obj);
-		else Console.Write(message, obj);
-
-		Console.ResetColor();
-	}
+	protected static Random rnd = new Random();
 	
 	// Вывод ошибок
-	public static void error(string type, string message) {
+	public static void error(string type, string? message = null) {
+		if (message == null) (type, message) = ("Error", type);
 		Console.BackgroundColor = ConsoleColor.Red;
 		Console.Write($" {type} ");
 		Console.BackgroundColor = ConsoleColor.Gray;
