@@ -9,14 +9,8 @@
 
 string[] week = new string[] {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
 
-int day = 0;
-bool res = false;
-while (res != true) {
-	day = rw.getInt("Введите номер дня недели") - 1;
-	if (day < 0 || day > 6) rw.echo("-- Попробуйте снова --");
-	else res = true;
-}
-
+int day;
+while ((day = rw.getInt("Введите номер дня недели", true) - 1) > 6) rw.echo("-- Попробуйте снова --");
 bool weekEnd = day < 5;
 rw.echo((weekEnd ? "Нет" : "Да") + $", {week[day]} - " + (weekEnd ? "не " : "") + "выходной");
 

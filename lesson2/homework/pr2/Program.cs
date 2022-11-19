@@ -7,7 +7,8 @@
 
 // -------------------------------------------------------------------
 
-string num = Math.Abs(rw.getInt()).ToString();
-Console.WriteLine($"{num}; 3 цифра - " + (num.Length > 2 ? $"{num[2]}" : "третьей цифры нет"));
+int num = rw.getInt();
+string num3 = Math.Abs(num).ToString();
+Console.WriteLine($"{num}; 3 цифра - " + (num3.Length > 2 ? $"{num3[2]}" : "третьей цифры нет"));
 
 // -------------------------------------------------------------------
