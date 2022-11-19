@@ -5,13 +5,10 @@
 
 // -------------------------------------------------------------------
 
-Random rand = new Random();
-
-int count = rw.getInt("Введите кол-во элементов");
+int count = rw.getInt("Введите кол-во элементов", true);
 
 int[] arr = new int[count];
-for (int i = 0; i < count; i++) arr[i] = rand.Next(0, 2);
-
-rw.echo(string.Join(", ", arr));
+for (int i = 0; i < count; i++) arr[i] = rand.init<int>(0, 1);
+ar.echoArray(arr);
 
 // -------------------------------------------------------------------

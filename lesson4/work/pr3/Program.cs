@@ -6,8 +6,8 @@
 
 // -------------------------------------------------------------------
 
-int num = rw.getInt();
-int res = 1;
+int num = rw.getInt("Введите число", true);
+double res = 1;
 for (int i = 1; i <= num; i++) res *= i;
 rw.echo($"Произведение чисел от 1 до {num} = {res}");
 

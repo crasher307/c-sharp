@@ -8,7 +8,7 @@ using func;
 
 // -------------------------------------------------------------------
 
-int num = rw.getInt();
+int num = rw.getInt("Введите число", true);
 int sum = 0;
 for (int i = 1; i <= num; i++) sum += i;
 rw.echo($"Сумма чисел от 1 до {num} = {sum}");
