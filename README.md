@@ -4,6 +4,9 @@
 ```bash
 sh start.sh # запуск проекта (если проекта не существует - создает)
 
+sh workRun.sh <lessonNumber> <projectNumber> # Запуск проекта из папки lesson<num>/work/pr<num>
+sh homeRun.sh <lessonNumber> <projectNumber> # Запуск проекта из папки lesson<num>/homework/pr<num>
+
 ############## START.SH ##############
 # 1. Ввод: Устанавливаем папку проекта ("y" - work | "n" - homework)
 # 2. Ввод: Устанавливаем папку урока (<number> - lesson<number>)
