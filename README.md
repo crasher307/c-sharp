@@ -129,3 +129,19 @@ dotnet run                                            # запуск проек�
         - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson7/homework/pr2/Program.cs) - на вход принимает позиции элемента в двумерном массиве, и возвращает значение/"элемента нет".
         - [pr3](https://github.com/crasher307/c-sharp/blob/master/lesson7/homework/pr3/Program.cs) - задает двумерный массив из целых чисел, ищет среднее арифметическое в каждом столбце.
 	</details>
+
+- <details><summary>Урок 8. Как не нужно писать код. Часть 2</summary>
+
+	Напишите программу, которая:
+    - [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson8/work)
+        - [pr1](https://github.com/crasher307/c-sharp/blob/master/lesson8/work/pr1/Program.cs) - поменяет местами первую и последнюю строку двумерного массива.
+        - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson8/work/pr2/Program.cs) - заменяет строки на столбцы.
+        - [pr3](https://github.com/crasher307/c-sharp/blob/master/lesson8/work/pr3/Program.cs) - составляет частотный словарь элементов двумерного массива.
+        - [pr4](https://github.com/crasher307/c-sharp/blob/master/lesson8/work/pr4/Program.cs) - удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.
+    - [домашнее задание](https://github.com/crasher307/c-sharp/blob/master/lesson8/homework)
+        - [pr1](https://github.com/crasher307/c-sharp/blob/master/lesson8/homework/pr1/Program.cs) - упорядочит по убыванию элементы каждой строки двумерного массива.
+        - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson8/homework/pr2/Program.cs) - будет находить строку с наименьшей суммой элементов.
+        - [pr3](https://github.com/crasher307/c-sharp/blob/master/lesson8/homework/pr3/Program.cs) - будет находить произведение двух матриц.
+        - [pr4](https://github.com/crasher307/c-sharp/blob/master/lesson8/homework/pr4/Program.cs) - будет построчно выводить массив, добавляя индексы каждого элемента.
+        - [pr5](https://github.com/crasher307/c-sharp/blob/master/lesson8/homework/pr5/Program.cs) - заполнит спирально массив 4 на 4.
+	</details>
