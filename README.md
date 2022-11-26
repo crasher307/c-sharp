@@ -145,3 +145,17 @@ dotnet run                                            # запуск проек�
         - [pr4](https://github.com/crasher307/c-sharp/blob/master/lesson8/homework/pr4/Program.cs) - будет построчно выводить массив, добавляя индексы каждого элемента.
         - [pr5](https://github.com/crasher307/c-sharp/blob/master/lesson8/homework/pr5/Program.cs) - заполнит спирально массив 4 на 4.
 	</details>
+
+- <details><summary>Урок 9. Как не нужно писать код. Часть 3</summary>
+
+	Напишите программу, которая:
+    - [работа во время семинара](https://github.com/crasher307/c-sharp/tree/master/lesson9/work)
+        - [pr1](https://github.com/crasher307/c-sharp/blob/master/lesson9/work/pr1/Program.cs) - выведет все натуральные числа в промежутке от 1 до N. (рекурсия)
+        - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson9/work/pr2/Program.cs) - выведет все натуральные числа в промежутке от M до N. (рекурсия)
+        - [pr3](https://github.com/crasher307/c-sharp/blob/master/lesson9/work/pr3/Program.cs) - будет принимать на вход число и возвращать сумму его цифр.
+        - [pr4](https://github.com/crasher307/c-sharp/blob/master/lesson9/work/pr4/Program.cs) - на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+    - [домашнее задание](https://github.com/crasher307/c-sharp/blob/master/lesson9/homework)
+        - [pr1](https://github.com/crasher307/c-sharp/blob/master/lesson9/homework/pr1/Program.cs) - выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+        - [pr2](https://github.com/crasher307/c-sharp/blob/master/lesson9/homework/pr2/Program.cs) - найдёт сумму натуральных элементов в промежутке от M до N.
+        - [pr3](https://github.com/crasher307/c-sharp/blob/master/lesson9/homework/pr3/Program.cs) - выведет результат вычисления функции Аккермана с помощью рекурсии.
+	</details>
